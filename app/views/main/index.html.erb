@@ -1,1 +1,6 @@
-this is the updated new main page 
+<h3>MAIN PAGE</h3> 
+
+<% if Current.user%>
+  Hey <%= Current.user.email %>
+  <%= button_to "Logout", signout_path , method: :delete %>
+<%end%>
