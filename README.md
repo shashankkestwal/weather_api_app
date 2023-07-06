@@ -5,20 +5,24 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.6
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* Database sqlite
 
 * Deployment instructions
 
-* ...
+To run the app in some system follow the given instructions
+
+get the code of rails application in you local system 
+
+run "bundle install" and "rails db:migrate"
+
+to get all the gemfiles and migration
+
+test application has  feature of signin , signout and weather checking functionality .
+
+  you need to sign up to check weather report for any place 
+  after signing in user can check the details of weather which somes from an external rest api provided by openweather  
+
+
