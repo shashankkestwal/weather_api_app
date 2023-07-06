@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   get "update_password", to: "passwords#edit"
   patch "update_password", to: "passwords#update" 
 
+  get "report", to: "weathers#index"
+  get "search", to: "weathers#search"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -1,4 +1,5 @@
 class PasswordsController < ApplicationController 
+  before_action :set_current_user
   before_action :require_user_logged_in!
 
   def edit
@@ -6,5 +7,15 @@ class PasswordsController < ApplicationController
   end 
 
   def update 
+    if Current.user.update(password_params)
+      redirect_to root_path, notice: "password updated"
+    else 
+      render :edit
+    end 
   end
+
+  private
+  def password_params
+    params.require(:user).permit(:password, :password_confirmation)
+  end 
 end 

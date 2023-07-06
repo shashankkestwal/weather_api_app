@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="col-lg-6">
+      <% if @report %>
+        <h4>Weather report</h4>
+        <dl>
+        <% @report.each do |key, value| %>
+            <dt><%= key %></dt>
+            <dd><%= value%></dd>
+        <% end %>    
+         </dl>
+      <% end %>  
+    </div>
+    <div>
+      <%= link_to "Change Location", report_path, class: "btn btn-primary" %> 
+    </div>
+</div>
